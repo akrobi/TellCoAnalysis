@@ -5,5 +5,5 @@ import warnings
 warnings.filterwarnings('ignore')
 
 # pd.set_option('max_column', None)
-db = pd.read_excel('../data/Week1_challenge_data_source.xlsx', na_values=['?', None])
-db.head()
+db = pd.read_excel(r'~\\Documents\\projects\\10academy\\week1\\TellCoAnalysis\\data\\TellCo_financial_data.xlsx', na_values=['?', None])
+print(db.head())
