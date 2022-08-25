@@ -4,7 +4,7 @@ from IPython.display import Image
 import warnings
 warnings.filterwarnings('ignore')
 
-db = pd.read_excel(r'~\\Documents\\projects\\10academy\\week1\\TellCoAnalysis\\data\\TellCo_financial_data.xlsx', na_values=['?', None])
+db = pd.read_excel(r'~\\Documents\\projects\\10academy\\week1\\TellCoAnalysis\\data\\first500valuesTellCo.xlsx', na_values=['?', None])
 # print(db.head())
 
 # column names. works
@@ -30,3 +30,14 @@ percent_missing(db)
 # to see which columns have missing values
 print(db.isna().sum())
 
+# # to see which columns* have large missing values
+# large_missing = db[db[1] > 5].index.to_list()
+# print(large_missing)
+
+# identifying the top 10 handsets used by the customers
+handsets = []
+for handset in db:
+    handsets.append(db['Handset Type'])
+print(handsets)
+
+# for handset in handsets:
